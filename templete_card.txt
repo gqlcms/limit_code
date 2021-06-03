@@ -1,0 +1,13 @@
+imax {nbins} number of bins
+jmax {nprocess_minus_1} number of processes minus 1
+kmax {nnuisance} number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+bin          {channel}  
+observation  {observation}
+----------------------------------------------------------------------------------------------------------------------------------
+bin                                         {channel_per_process}                                                               
+process                                     {process_name_per_channel}
+process                                     {process_number_per_channel}
+rate                                        {rate}                             
+----------------------------------------------------------------------------------------------------------------------------------
+{Uncertainty}
