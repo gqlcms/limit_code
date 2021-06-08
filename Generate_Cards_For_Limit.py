@@ -162,7 +162,9 @@ class Generate_Cards_For_Limit():
             out += uncertainty+"    "+Uncertainty[uncertainty]['un_type']+"    "
             for channel in channel_name:
                 for process_number,process in enumerate(process_name):
-                    out += Uncertainty[uncertainty]['un'][(channel,process)]+space
+                    uncertainty_value = Uncertainty[uncertainty]['un'].get((channel,process),"-") # update --21.6.8
+                    out += uncertainty_value + space # update --21.6.8
+                    # out += Uncertainty[uncertainty]['un'][(channel,process)]+space # not correct for some process do not have some uncertainties -- 6.8 
             out += "\n"
         datacard_content["Uncertainty"] = out
         self.datacard_content["Uncertainty"] = out
